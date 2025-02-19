@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MouseMovement : MonoBehaviour
 {
-       public float mouseSensitivity = 100f;
+       public float mouseSensitivity = 500f;//default values
 
        float xRotation = 0f;
        float yRotation = 0f;
 
-       public float topClamp = 90f;
-       public float bottomClamp = 90f;
+       public float topClamp = -80f; //default values
+       public float bottomClamp = 80f; //default values
 
 
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class MouseMovement : MonoBehaviour
         xRotation -= mouseY;
 
         //clamp the Rotation
-        xRotation = Mathf.Clamp(xRotation, 90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, topClamp, bottomClamp);
 
         //Rotation around the y axis (look left and right)
         yRotation += mouseX;
