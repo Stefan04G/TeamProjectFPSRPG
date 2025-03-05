@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 199348069}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5190435240761135024, guid: c147522efdf2a5d41a5df414d1aa2fae, type: 3}
   bulletSpawn: {fileID: 737096546}
-  bulletVelocity: 30
+  bulletVelocity: 100
   bulletPrefabLifeTime: 3
 --- !u!1001 &1244706604
 PrefabInstance:
