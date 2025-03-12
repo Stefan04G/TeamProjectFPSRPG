@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
 
     //Burst
     public int bulletsPerBurst = 3;
-    public int burestBulletsLeft;
+    public int burstBulletsLeft;
 
     //Spread
     public float spreadIntensity;
@@ -36,7 +36,7 @@ public class Weapon : MonoBehaviour
     private void Awake()
     {
         readyToShoot = true;
-        burestBulletsLeft = bulletsPerBurst;
+        burstBulletsLeft = bulletsPerBurst;
     }
 
     // Update is called once per frame
@@ -56,14 +56,14 @@ public class Weapon : MonoBehaviour
 
         if (readyToShoot && isShooting)
         {
-            burestBulletsLeft = bulletsPerBurst;
+            burstBulletsLeft = bulletsPerBurst;
             FireWeapon();
         }
     }
 
     private void FireWeapon()
     {
-        readyToShoot = false;
+        //readyToShoot = false;
 
         Vector3 shootingDirection = CalculateDirectionAndSpread().normalized;
 
@@ -88,9 +88,9 @@ public class Weapon : MonoBehaviour
         }
 
         //Burst Mode
-        if (currentShootingMode == ShootingMode.Burst && burestBulletsLeft > 1) // we already shoot once before this point
+        if (currentShootingMode == ShootingMode.Burst && burstBulletsLeft > 1) // we already shoot once before this point
         {
-            burestBulletsLeft--;
+            burstBulletsLeft--;
             Invoke("FireWeapon", shootingDelay);
         }
     }   

@@ -798,12 +798,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39775dac3d891d143a22ebb82a4425c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 1294726446}
   isShooting: 0
-  readyToShoot: 0
+  readyToShoot: 1
   shootingDelay: 2
   bulletsPerBurst: 3
-  burestBulletsLeft: 0
+  burstBulletsLeft: 0
   spreadIntensity: 0
   bulletPrefab: {fileID: 5190435240761135024, guid: c147522efdf2a5d41a5df414d1aa2fae, type: 3}
   bulletSpawn: {fileID: 737096546}
@@ -975,6 +975,11 @@ Transform:
 --- !u!4 &1294726444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 836718682585021886, guid: b1f74dcee5e1cff40a77e4d9253c901c, type: 3}
+  m_PrefabInstance: {fileID: 511319166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1294726446 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2829818403739900312, guid: b1f74dcee5e1cff40a77e4d9253c901c, type: 3}
   m_PrefabInstance: {fileID: 511319166}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1383256842
