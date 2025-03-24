@@ -2683,7 +2683,6 @@ GameObject:
   - component: {fileID: 833142867}
   - component: {fileID: 833142870}
   - component: {fileID: 833142868}
-  - component: {fileID: 833142871}
   m_Layer: 0
   m_Name: CheckSphere
   m_TagString: Untagged
@@ -2701,7 +2700,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 200, y: 200, z: 200}
+  m_LocalScale: {x: 150, y: 150, z: 150}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1950360898}
@@ -2735,18 +2734,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833142866}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &833142871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833142866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e86792c6e5ebf4e4c885141b698599ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &843390983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5211,11 +5198,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.046789005, y: 0.033333354, z: 0.03724754}
   m_Center: {x: 0.0017521599, y: -0.000000005559018, z: 0.018625626}
---- !u!1 &1630934596 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ae3283b46e64f0c47b48d375d5ede3a8, type: 3}
-  m_PrefabInstance: {fileID: 1244706604}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1635179237
 GameObject:
   m_ObjectHideFlags: 0
@@ -6088,13 +6070,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1950360897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c5dfb1b627ebd4289f411429a639db, type: 3}
+  m_Script: {fileID: 11500000, guid: ee967ca22b69446458c7b66a9a0b9c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soldier: {fileID: 1630934596}
-  speed: 10
-  multiplier: 10
-  max_speed: 8
+  enemy: {fileID: 0}
+  player: {fileID: 297122252}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 1
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 50
+  attackInterval: 0.5
+  vision: 200
+  range: 120
+  playerInVision: 0
+  playerInRange: 0
 --- !u!1 &1962956136
 GameObject:
   m_ObjectHideFlags: 0
